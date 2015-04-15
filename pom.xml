@@ -1,0 +1,20 @@
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>eu.headcrashing.jotal</groupId>
+	<artifactId>jotal-project</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>jotal</name>
+	<description>The Java Open Type Adapters Library provides common off-the-shelf drop-in type mapping adapters for frameworks like JAX-RS, JPA, JAXB, and JSON-B.</description>
+	<inceptionYear>2015</inceptionYear>
+	<developers>
+		<developer>
+			<id>mkarg</id>
+			<name>Markus KARG</name>
+			<email>markus@headcrashing.eu</email>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:https://github.com/mkarg/jotal.git</connection>
+	</scm>
+</project>
