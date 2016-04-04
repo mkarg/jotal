@@ -1,20 +1,65 @@
 ﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.headcrashing.jotal</groupId>
-	<artifactId>jotal-project</artifactId>
+	<artifactId>jotal</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
 	<name>jotal</name>
 	<description>The Java Open Type Adapters Library provides common off-the-shelf drop-in type mapping adapters for frameworks like JAX-RS, JPA, JAXB, and JSON-B.</description>
 	<inceptionYear>2015</inceptionYear>
+	<licenses>
+		<license>
+			<name>GPLv3</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+			<comments>Classpath Exception</comments>
+		</license>
+	</licenses>
+	<organization>
+		<name>Head Crashing Informatics</name>
+		<url>http://www.headcrashing.eu</url>
+	</organization>
 	<developers>
 		<developer>
 			<id>mkarg</id>
 			<name>Markus KARG</name>
 			<email>markus@headcrashing.eu</email>
+			<organization>Head Crashing Informatics</organization>
+			<organizationUrl>http://www.headcrashing.eu</organizationUrl>
 		</developer>
 	</developers>
 	<scm>
 		<connection>scm:git:https://github.com/mkarg/jotal.git</connection>
 	</scm>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<license.licenseName>gpl_v3</license.licenseName>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+			<version>[2.1, 2.2)</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>update-file-header</goal>
+						</goals>
+						<configuration>
+							<addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
